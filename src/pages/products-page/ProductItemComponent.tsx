@@ -24,7 +24,7 @@ const ProductItemComponent = ({ product }: IProductItemComponentProps) => {
             <div className="flex justify-center font-light "><img src={product.image} alt={ product.image } className="m-10 max-h-60"/></div>
           
             <button
-                className=" bg-black hover:bg-red-800 text-white font-bold py-2 px-4 rounded-xl m-4 "
+                className=" bg-red-800 hover:bg-red-950 text-white font-bold py-2 px-4 rounded-xl m-4 "
             onClick={handleMoreDetails}>
                  View Item
             </button>

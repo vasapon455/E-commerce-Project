@@ -1,12 +1,14 @@
 import { useParams } from "react-router-dom";
 import { useProducts } from "../../contexts/ProductProvider";
 import IProduct from "../products-page/IProduct";
+import { useCart } from "../../contexts/CartProvider";
 
 export default function ProductDetailPage() {
    
         const {id} = useParams<{id: string}>();
         const products:IProduct[] = useProducts();
         const product = products.find(product => product.id === Number(id));
+        const { addToCart } = useCart();
 
     return (
         <div className="flex justify-center">
@@ -18,7 +20,7 @@ export default function ProductDetailPage() {
                         <div className="text-m m-8 "><span className="font-bold">Description:  </span>{product?.description}</div>
                         <div className="flex flex-row justify-between">
                             <p className="p-2 mx-5"><span className="font-bold">Price:  </span>${product?.price}</p>
-                            <button className=" bg-black hover:bg-red-800 marker: text-white font-bold py-2 px-4 rounded float-right">Add to Cart</button>
+                            <button onClick={() => addToCart(product!)} className=" bg-red-800  hover:bg-red-950 marker: text-white font-bold py-2 px-4 rounded float-right">Add to Cart</button>
                         </div>
                     </div>
                    
