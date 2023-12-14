@@ -1,0 +1,8 @@
+.slide {
+    animation: slide 1.5s;
+}
+
+@keyframes slide {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}

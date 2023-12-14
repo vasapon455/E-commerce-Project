@@ -1,5 +1,5 @@
 import IProduct from "../products-page/IProduct"
-
+import "./BannerItem.css"
 
 interface BannerItemProps{
     key: string;
@@ -10,7 +10,7 @@ interface BannerItemProps{
 export default function BannerItem({product, currentIndex}:BannerItemProps){
    
     return (
-        <div className={currentIndex === product.id?" visible":"hidden"}>
+        <div className={currentIndex === product.id? "slide visible":"slide hidden"}>
                 <img src={product.image}/>
         </div>
         )
