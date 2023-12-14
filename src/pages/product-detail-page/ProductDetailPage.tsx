@@ -12,8 +12,8 @@ export default function ProductDetailPage() {
 
     return (
         <div className="flex justify-center">
-            <div className="pt-10 m-10 bg-slate-200 w-1024">
-                <div className="bg-white rounded-lg shadow-md p-4  border border-gray-300">
+            <div className="pt-10 m-10  w-1024">
+                <div className="rounded-lg shadow-md p-4  border border-gray-300">
                     <h2 className="text-xl font-bold mb-4">{product?.title}</h2>
                     <div className="flex-col justify-center m-8 ">
                         <div className="flex justify-center"><img src={product?.image} alt={product?.description} className="w-80 m-8 "/></div>

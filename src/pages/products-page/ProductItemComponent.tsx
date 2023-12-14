@@ -17,7 +17,7 @@ const ProductItemComponent = ({ product }: IProductItemComponentProps) => {
 
 
     return (
-        <div className="bg-white rounded-lg shadow-md p-4  border-gray-600 flex-col justify-center align-center">
+        <div className="bg-white text-black rounded-lg shadow-md p-4  border-gray-600 flex-col justify-center align-center">
             <h2 className=" text-lg font-bold m-4">{ product.title }</h2>
             {/* product.image */}
            
