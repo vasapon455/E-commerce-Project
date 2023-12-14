@@ -1,7 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import IProduct from './IProduct';
 
-
 interface IProductItemComponentProps {
     key: string;
     product: IProduct;

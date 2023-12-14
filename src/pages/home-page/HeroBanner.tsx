@@ -5,9 +5,6 @@ import { useState } from "react";
 
 const products:IProduct[] = productJSON.products;
 
-
-
-
 export default function HeroBanner(){
    
     const [currentPage, setCurrentPage] = useState(1)
