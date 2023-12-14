@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Nextflow: React TypeScript Starter (with ViteJS)
 
 ## Debuggin via VSCode
@@ -22,3 +23,6 @@
 
 3. Start the app in debug mode: `npm run dev`
 4. Start the debugger in VSCode
+=======
+E-commerce project from class Nextflow Typescript-ReactJS
+>>>>>>> 2249912a730f96baf2fbce1c617e28622838f400
