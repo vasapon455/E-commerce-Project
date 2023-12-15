@@ -25,16 +25,12 @@ export default function SubmitOrder() {
 
     return ( 
    
-    <div className="flex  flex-col justify-center items-center text-center">
-       <div  className="pt-10 m-80  w-1024 text-center">
-       <div className="w-full bg-black text-black" >
-         <div className="object-fill bg-red text-black"></div>
-         
-       </div>
-         <header className=" mb-20 h-11 "><h1 className="text-6xl font-extrabold text-center leading-40">Please wait <br/> while we are processing <br/>your order...</h1></header>
+    <div className="flex flex-col justify-center items-center text-center">
+       <div  className="pt-10 m-80  xl:w-full  text-center">
+         <header className="h-11"><h1 className="xl:text-6xl font-extrabold text-center leading-40 block">Please wait <br/> while we are processing <br/>your order...</h1></header>
         </div>       
         <button
-                className={buttonState=== true?" text-4xl bg-red-800 hover:bg-red-950 text-white font-bold py-5 px-5 rounded-xl m-20": "invisible"}
+                className={buttonState=== true?" xl:text-4xl bg-red-800 hover:bg-red-950 text-white font-bold py-5 px-5 rounded-xl": "invisible"}
             onClick={redirect}>
                  Next
             </button>

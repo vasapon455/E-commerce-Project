@@ -16,11 +16,11 @@ const ProductItemComponent = ({ product }: IProductItemComponentProps) => {
 
 
     return (
-        <div className=" text-2xl border border-gray-300 bg-white text-black rounded-lg shadow-xl flex-row justify-center align-center w-auto h-500">
-            <h2 className=" text-4xl font-bold m-20">{ product?.title }</h2>
-        
-            <div className="flex flex-row justify-center  m-10 border-gray-600">
-                <img  src={product.image} alt={ product?.image } className="object-fit max-h-96 max-w-72  m-10"/>
+        <div className="text-2xl  border border-gray-300 bg-white text-black rounded-lg shadow-xl flex-row justify-center align-center ">
+            <h2 className=" xl:text-4xl font-bold m-20">{ product?.title }</h2>
+
+            <div className="flex flex-row justify-center border-gray-600 m-10 xl:p-20">
+                <img  src={product.image} alt={ product?.image } className=" object-contain w-auto m-10 xl:h-96 md:h-40 sm:h-20"/>
             </div>
           
             <button
