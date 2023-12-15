@@ -16,13 +16,15 @@ const ProductItemComponent = ({ product }: IProductItemComponentProps) => {
 
 
     return (
-        <div className="bg-white text-black rounded-lg shadow-md p-4  border-gray-600 flex-col justify-center align-center">
-            <h2 className=" text-lg font-bold m-4">{ product?.title }</h2>
+        <div className=" text-2xl border border-gray-300 bg-white text-black rounded-lg shadow-xl flex-row justify-center align-center w-auto h-500">
+            <h2 className=" text-4xl font-bold m-20">{ product?.title }</h2>
         
-            <div className="flex justify-center font-light "><img src={product.image} alt={ product?.image } className="m-10 max-h-60"/></div>
+            <div className="flex flex-row justify-center  m-10 border-gray-600">
+                <img  src={product.image} alt={ product?.image } className="object-fit max-h-96 max-w-72  m-10"/>
+            </div>
           
             <button
-                className=" bg-red-800 hover:bg-red-950 text-white font-bold py-2 px-4 rounded-xl m-4 "
+                className="  bg-red-800 hover:bg-red-950 text-white font-bold py-5 px-5 rounded-lg m-20"
             onClick={handleMoreDetails}>
                  View Item
             </button>

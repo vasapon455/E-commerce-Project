@@ -24,6 +24,7 @@ function App() {
                     <Route path="/products/:id" element={<ProductDetailPage />}/>
                     <Route path="/cart" element={<Checkout />}/>
                     <Route path="/cart/payment" element={<SubmitOrder/>}/>
+
                   </Routes>
           </ProductProvider>
         </CartProvider>

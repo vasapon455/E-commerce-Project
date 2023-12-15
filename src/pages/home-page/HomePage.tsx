@@ -7,7 +7,7 @@ export default function HomePage() {
             <header className=" mb-20 h-11 ">
                 <h1 className="text-6xl font-extrabold text-center">Busy Shop</h1>
             </header> 
-               <p className="text-4xl" >Welcome! Enjoy shopping and waiting for delayed parcels, because we are so busy.</p>
+               <p className="text-4xl" >Welcome! Enjoy your shopping experience. <br/>Please bear with us for any delays in parcel delivery, <br/>as we are currently experiencing high demand.</p>
             <HeroBanner/>
         </div>   
     </div>
