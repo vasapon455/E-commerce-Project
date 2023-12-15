@@ -6,7 +6,7 @@ export default function CheckOut(){
     const {itemsInCart} = useCart();
     const itemPrice = itemsInCart.map((item)=> item.price);
     const allPrice =itemPrice.reduce((prev,current)=>{return prev + current},0);
-
+      
     return(
         <div className="flex flex-col justify-center  items-center">
             <div className="pt-10 m-20 bg-blue-900 text-white w-1024 text-center align-middle">
@@ -19,7 +19,7 @@ export default function CheckOut(){
             <div className="flex flex-col justify-around ">
                     <p className="text-white text-xl m-8 "><span className="font-bold">Total Price:  </span>${allPrice}</p>
                     <button
-                    className={itemsInCart.length===0?"invisible" : "bg-red-800 hover:bg-red-950 text-white font-bold py-2 px-4 rounded-xl m-8"}
+                    className={itemsInCart.length===0? "invisible" : "bg-red-800 hover:bg-red-950 text-white font-bold py-2 px-4 rounded-xl m-8"}
             >
                     Submit Order
                 </button>

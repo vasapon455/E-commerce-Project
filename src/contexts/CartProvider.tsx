@@ -8,9 +8,10 @@ interface ICartProviderProps {
 interface ICartContext{
     itemsInCart: IProduct[];
     addToCart: (product: IProduct) => void;
+    removeFromCart: (product: IProduct) => void;
 }
 
-const CartContext = createContext<ICartContext>({itemsInCart:[], addToCart:()=>{}})
+const CartContext = createContext<ICartContext>({itemsInCart:[], addToCart:()=>{}, removeFromCart:()=>{}})
 
 export default function CartProvider({ children }: ICartProviderProps) {
   
@@ -19,9 +20,14 @@ export default function CartProvider({ children }: ICartProviderProps) {
    const addToCart = (product:IProduct) => {
     setItemInCart(existingCart => [...existingCart, product]);
    }
+
+   const removeFromCart = (product:IProduct) =>{
+    itemsInCart.find(item => item.id !== product.id);
+    setItemInCart(itemsInCart);
+   }
   
     return (
-   <CartContext.Provider value={{itemsInCart,addToCart}}>
+   <CartContext.Provider value={{itemsInCart,addToCart,removeFromCart}}>
         {children}
     </CartContext.Provider>
   )

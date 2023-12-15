@@ -1,6 +1,6 @@
 
 import IProduct from "../products-page/IProduct"
-
+import { useCart } from "../../contexts/CartProvider";
 
 
 interface CheckOutItemProps {
@@ -9,6 +9,8 @@ interface CheckOutItemProps {
 }
 
 export default function CheckoutItem({product}:CheckOutItemProps){
+
+    const {removeFromCart} = useCart();
 
     return (
         <div>
@@ -23,7 +25,7 @@ export default function CheckoutItem({product}:CheckOutItemProps){
                         <p className=" text-2xl m-8"><span className="font-bold">Price:  </span>${product?.price}</p>
                             <button
                     className=" bg-red-800 hover:bg-red-950 text-white font-bold py-2 px-4 rounded-xl my-4 mt-8"
-            >
+           onClick={()=>removeFromCart(product!)} >
                     Remove
                 </button>
             </div>
