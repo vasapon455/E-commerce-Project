@@ -1,6 +1,7 @@
-import React, { ReactNode, createContext, useContext} from 'react'
 import IProduct from "../pages/products-page/IProduct.ts"
 import axios from "axios";
+import { createContext,useContext } from "react";
+import { ReactNode } from "react";
 
 
 interface ProductProviderProps{
