@@ -2,6 +2,7 @@ import BannerItem from "./BannerItem";
 import productJSON from "../../data/products.json";
 import IProduct from "../products-page/IProduct"
 import { useState } from "react";
+import { CaretLeftFill,CaretRightFill } from "react-bootstrap-icons";
 
 const products:IProduct[] = productJSON.products;
 
@@ -20,17 +21,13 @@ export default function HeroBanner(){
     }
 
     return(
-    <div className="flex p-20 justify-center items-center content-center shadow-md rounded-lg bg-white border border-gray-300 gap-10 xl:w-full xl:h-full">
-        <button className={currentPage > 1 ? "float-left visible xl:w-10 xl:h-20 relative": "invisible"} onClick={handlePrev}>  
-            <svg className=" text-red-800 hover:text-red-950" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 10 16">
-            <path d="M8.766.566A2 2 0 0 0 6.586 1L1 6.586a2 2 0 0 0 0 2.828L6.586 15A2 2 0 0 0 10 13.586V2.414A2 2 0 0 0 8.766.566Z"/>
-            </svg>    
+    <div className="flex  justify-center items-center content-center shadow-md rounded-lg bg-white border border-gray-300  xl:px-20 md:px-20 sm:px-30  xl:mt-20 h-full  w-3/5 xl:gap-20 ">
+        <button className={currentPage > 1 ? "float-left visible xl:w-10 xl:h-20 relative": "hidden"} onClick={handlePrev}>  
+           < CaretLeftFill className="xl:w-20 xl:h-20 text-red-800"/>
         </button>
         {products.map( product => <BannerItem key={product.id.toString()} product={product} currentIndex={currentPage}/>)}
-        <button className={currentPage !== products.length? "float-right visible xl:w-10 xl:h-20 relative": "invisible"} onClick={handleNext}>
-            <svg className="  text-red-800 hover:text-red-950" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 10 16">
-            <path d="M3.414 1A2 2 0 0 0 0 2.414v11.172A2 2 0 0 0 3.414 15L9 9.414a2 2 0 0 0 0-2.828L3.414 1Z"/>
-            </svg>
+        <button className={currentPage !== products.length? "float-right visible xl:w-10 xl:h-20 relative": "hidden"} onClick={handleNext}>
+           <CaretRightFill className="xl:w-20 xl:h-20 text-red-800"/>    
         </button>
     </div>)
 }

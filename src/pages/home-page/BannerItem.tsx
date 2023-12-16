@@ -10,8 +10,8 @@ interface BannerItemProps{
 export default function BannerItem({product, currentIndex}:BannerItemProps){
    
     return (
-        <div className={currentIndex === product.id? "slide visible":"slide hidden"}>
-                <img src={product.image} className="object-contain xl:w-auto xl:h-72 sm:h-40"   />
+        <div className={currentIndex === product.id? "slide visible ":"slide hidden"}>
+                <img src={product.image} className="object-contain"  />
         </div>
         )
       }

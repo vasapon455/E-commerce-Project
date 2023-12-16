@@ -8,6 +8,7 @@ import ProductProvider from "./contexts/ProductProvider";
 import CartProvider from "./contexts/CartProvider";
 import Checkout from "./pages/checkout-page/CheckOut"
 import SubmitOrder from "./pages/submit-page/SubmitOrder";
+import Footer from "./components/Footer";
 import "./app.css";
 
 
@@ -24,10 +25,10 @@ function App() {
                     <Route path="/products/:id" element={<ProductDetailPage />}/>
                     <Route path="/cart" element={<Checkout />}/>
                     <Route path="/cart/payment" element={<SubmitOrder/>}/>
-
                   </Routes>
           </ProductProvider>
         </CartProvider>
+        <Footer/>
       </Router>
     </>
   )
