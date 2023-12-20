@@ -17,7 +17,7 @@ export default function CheckOut() {
   return (
     <div className="flex justify-center">
       <div className="pt-10 mt-20 text-center xl:text-2xl">
-        <h1 className="h-11 first-letter:xl:text-6xl sm:text-4xl xl:mb-20 md:mb-20 sm:mb-20 font-extrabold text-center">
+        <h1 className="h-11 xl:text-6xl sm:text-4xl xl:mb-20 md:mb-20 sm:mb-20 font-extrabold text-center">
           Check Out
         </h1>
         <div>
